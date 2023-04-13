@@ -1,4 +1,5 @@
 #!/usr/bin/python
+#esse script descobre as portas abertas de um host
 import socket,sys
 
 ip = sys.argv[1] 

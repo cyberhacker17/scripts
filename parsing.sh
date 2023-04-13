@@ -1,4 +1,5 @@
 #!/bin/bash
+#Esse script pode encontrar os subdominios de um site e seu endereço ip
 if [ "$1" == "" ]
 then
 	echo "WHITEHACKER - PARSING HTML"

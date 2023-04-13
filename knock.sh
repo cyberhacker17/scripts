@@ -1,4 +1,5 @@
 #!/bin/bash
+#this scripts can open ports in a host
 host=172.16.1
 for ip in $(seq 1 1024);
 do

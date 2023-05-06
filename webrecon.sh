@@ -1,4 +1,5 @@
 #!/bin/bash
+#Version 1.5
 #script criado por: cyberhack17
 #PARA UTILIZAR O SCRIPT É NECESSARIO TER O "CURL"
 #Esse script lista os diretórios e arquivos de um site 

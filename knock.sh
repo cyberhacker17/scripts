@@ -1,5 +1,5 @@
 #!/bin/bash
-#Version 1.3
+#Version 1.5
 #this scripts can open ports in a host
 if [ "$1" == "" ]
 then

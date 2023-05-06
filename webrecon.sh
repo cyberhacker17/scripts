@@ -1,4 +1,7 @@
 #!/bin/bash
+#script criado por: cyberhack17
+#Esse script lista os diretórios e arquivos de um site 
+#NECESSÁRIO TER UMA WORDLIST
 if [ "$1" == "" ]
 then
 echo "SCRIPT - WEBRECON"
@@ -21,6 +24,7 @@ Encontrar_Diretórios() {
 
 
 Encontrar_Arquivos() {
+	#aqui ele se conecta com o site atravez do curl usando um User_Argent diferente para não ser bloqueado pelo firewall
 	resposta=$(curl -s -H "User-Agent: whiteTool" -o /dev/null -w "%{http_code}" $1/$palavra.$2)
 
         if [ $resposta == "200" ]
@@ -32,11 +36,14 @@ Encontrar_Arquivos() {
 echo -e "\e[33m=================================================================\e[0m"
 echo -e "\e[34mPROCURANDO POR AQRUIVOS E DIRETÓRIOS\e[0m"
 echo -e "\e[33m=================================================================\e[0m"
+#coloque aqui sua wordlist 
+#for palavra in $(cat sua_wordlist.txt)
 for palavra in $(cat lista2.txt)
 do
 Encontrar_Diretórios $1
 done
 echo -e "\e[33m=================================================================\e[0m"
+#faça a mesma coisa aqui
 for palavra in $(cat lista2.txt)
 do
 Encontrar_Arquivos $1 $2 

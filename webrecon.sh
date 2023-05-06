@@ -1,5 +1,5 @@
 #!/bin/bash
-#Version 1.5
+#Version 1.7
 #script criado por: cyberhack17
 #PARA UTILIZAR O SCRIPT É NECESSARIO TER O "CURL"
 #Esse script lista os diretórios e arquivos de um site 
@@ -11,8 +11,9 @@ echo "SCRIPT - WEBRECON"
 echo "Modo de uso: ./webrecon.sh SITE php"
 echo "CURL IS NECESSARY"
 else
+status=$(curl -s -A "whiteTool" -I $1)
 server=$(curl -s --head $1 | grep "Server:" | cut -d ":" -f2)
-tecnologia=$(curl -s --head businesscorp.com.br | grep "Content-Type:" | cut -d ":" -f2)
+tecnologia=$(echo "$status" | grep -E "X-Powered-By" | cut -d ":" -f 2)
 echo -e "\e[33m=================================================================\e[0m"
 echo -e "\e[33m\033[5m->\e[0m\033[0m \e[34mwebServer indentificado: $server\e[0m"
 echo -e "\e[33m\033[5m->\e[0m\033[0m \e[34mTecnologia: $tecnologia\e[0m"

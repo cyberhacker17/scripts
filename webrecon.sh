@@ -1,11 +1,14 @@
 #!/bin/bash
 #script criado por: cyberhack17
+#PARA UTILIZAR O SCRIPT É NECESSARIO TER O "CURL"
 #Esse script lista os diretórios e arquivos de um site 
 #NECESSÁRIO TER UMA WORDLIST
+#PARA SABER COMO USAR EXECUTE O SCRIPT SEM ARGUMENTO(./webrecon.sh)
 if [ "$1" == "" ]
 then
 echo "SCRIPT - WEBRECON"
 echo "Modo de uso: ./webrecon.sh SITE php"
+echo "CURL IS NECESSARY"
 else
 server=$(curl -s --head $1 | grep "Server:" | cut -d ":" -f2)
 tecnologia=$(curl -s --head businesscorp.com.br | grep "Content-Type:" | cut -d ":" -f2)

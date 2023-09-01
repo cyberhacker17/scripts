@@ -1,5 +1,5 @@
-!/bin/bash
-
+#!/bin/bash
+# Version 1.1.1
 # Precisa estar logado como root!
 # Esse script funciona somente em linux, automatiza o processo de atualização dos repositórios!
 echo "deseja atualizar o sistema?: [sim/não]"

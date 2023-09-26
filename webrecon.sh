@@ -58,3 +58,8 @@ echo -e "\e[33m=================================================================
 #faça a mesma coisa aqui
 for palavra in $(cat /usr/share/wordlists/dirb/big.txt)
 do
+Encontrar_Arquivos $1 $2 
+done
+echo -e "\e[33m=================================================================\e[0m"
+fi
+fi

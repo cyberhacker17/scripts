@@ -53,6 +53,7 @@ if [ "$resposta" == "diretorios" ]
 then    
         echo -e "\e[34mPROCURANDO POR DIRETÓRIOS\e[0m"
         echo -e "\e[33m=================================================================\e[0m"
+        #coloque aqui sua wordlist para os diretorios
         for palavra in $(cat /usr/share/wordlists/dirb/big.txt)
         do
                 Encontrar_Diretórios $1 
@@ -67,6 +68,7 @@ else
         while read palavra
         do
                 Encontrar_Arquivos $1 $2
+        #coloque aqui sua wordlist para os nomes dos arquivos
         done < cyber.txt
         echo -e "\e[33m=================================================================\e[0m"
 fi
